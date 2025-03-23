@@ -9,7 +9,11 @@ public class ReusableMethods {
     public static JsonPath rawToJson(Response resp) {
         // Extract the body of the response as a String, then convert it to a JsonPath object
         String responseString = resp.getBody().asString();
-        return new JsonPath(responseString);}
+        return new JsonPath(responseString);
+    }
+	public static JsonPath rawToJson(String response) {
+        return new JsonPath(response);  // Converts the response string into JsonPath object
+        }
 
 
 	
